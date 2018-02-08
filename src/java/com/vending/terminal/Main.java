@@ -9,5 +9,6 @@ public class Main {
     public static void main(String[] args) {
         AppLogger.getInstance().log("Starting system");
         ApplicationFacade.getInstance().startup(new StartupCommand());
+        final GpioController gpio = GpioFactory.getInstance();
     }
 }
