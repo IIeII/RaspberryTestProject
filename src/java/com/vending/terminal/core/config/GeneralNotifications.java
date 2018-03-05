@@ -1,5 +1,9 @@
 package com.vending.terminal.core.config;
 
 public class GeneralNotifications {
-    public static String STARTUP = "STARTUP";
+
+    public static final String STARTUP = "STARTUP";
+
+    public static final String BONUS_BALANCE_UPDATED = "BONUS_BALANCE_UPDATED";
+    public static final String REGULAR_BALANCE_UPDATED = "REGULAR_BALANCE_UPDATED";
 }
