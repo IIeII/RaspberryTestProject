@@ -9,4 +9,6 @@ public class MoneyAcceptorProxy extends Proxy {
     public MoneyAcceptorProxy(String proxyName) {
         super(NAME);
     }
+
+
 }
