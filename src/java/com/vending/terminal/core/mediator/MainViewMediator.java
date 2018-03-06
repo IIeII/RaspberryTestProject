@@ -26,7 +26,7 @@ public class MainViewMediator extends Mediator {
         view = (MainViewComponent) viewComponent;
 //        view.createView();
         try {
-            barierDetection();
+//            barierDetection();
         } catch (Exception e) {
             e.printStackTrace();
         }

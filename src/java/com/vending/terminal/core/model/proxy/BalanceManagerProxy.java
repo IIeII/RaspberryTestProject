@@ -24,26 +24,32 @@ public class BalanceManagerProxy extends Proxy {
         bonusBalance = new BigDecimal(0);
     }
 
-    public void addToBonusBalance(String value){
+    public BigDecimal addToBonusBalance(String value){
         bonusBalance = bonusBalance.add(new BigDecimal(value));
         updateBalance();
+
+        return bonusBalance;
     }
 
-    public void addToRegularBalance(String value){
+    public BigDecimal addToRegularBalance(String value){
         regularBalance = regularBalance.add(new BigDecimal(value));
         updateBalance();
+
+        return regularBalance;
     }
 
-    public void removeFromTotalBalance(String value){
+    public BigDecimal removeFromTotalBalance(String value){
         if (bonusBalance.compareTo(BigDecimal.ZERO) == 0){
 
         }
         regularBalance = regularBalance.subtract(new BigDecimal(value));
 
+        return ;
     }
 
-    public void isEnoughMoneyForItem(String value){
-        BigDecimal totalAmount = new BigDecimal(value)
+    public Boolean isEnoughMoneyForItem(String price){
+        BigDecimal totalAmount = new BigDecimal(price).compareTo()
+        return null;
     }
 
     private void updateBalance(){
