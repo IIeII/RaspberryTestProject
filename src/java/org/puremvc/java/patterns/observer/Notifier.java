@@ -11,6 +11,7 @@
 */
 package org.puremvc.java.patterns.observer;
 
+import com.vending.terminal.utils.AppLogger;
 import org.puremvc.java.interfaces.INotifier;
 import org.puremvc.java.patterns.facade.Facade;
 
@@ -102,6 +103,13 @@ public class Notifier implements INotifier
 	public void sendNotification( String notificationName)
 	{
 		facade.sendNotification( notificationName);
+	}
+
+	protected void log(String msg){
+		AppLogger.getInstance().log(msg);
+	}
+	protected void err(String msg){
+		AppLogger.getInstance().error(msg);
 	}
 
 }

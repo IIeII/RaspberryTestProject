@@ -47,12 +47,4 @@ public class SimpleCommand extends Notifier implements ICommand
 	public void execute( INotification notification )
 	{
 	}
-
-	protected void log(String msg){
-		AppLogger.getInstance().log(msg);
-	}
-	protected void err(String msg){
-		AppLogger.getInstance().error(msg);
-	}
-
 }

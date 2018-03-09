@@ -6,7 +6,7 @@ public class MoneyAcceptorProxy extends Proxy {
 
     public static String NAME = "MoneyAcceptorProxy";
 
-    public MoneyAcceptorProxy(String proxyName) {
+    public MoneyAcceptorProxy() {
         super(NAME);
     }
 
