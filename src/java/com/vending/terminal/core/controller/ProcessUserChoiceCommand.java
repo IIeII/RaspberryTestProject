@@ -3,6 +3,8 @@ package com.vending.terminal.core.controller;
 import com.vending.terminal.core.config.GeneralNotifications;
 import com.vending.terminal.core.model.proxy.BalanceManagerProxy;
 import com.vending.terminal.core.model.proxy.DataBaseProxy;
+import com.vending.terminal.core.model.proxy.DoorsAndCoverProxy;
+import com.vending.terminal.core.model.proxy.MotorsProxy;
 import org.puremvc.java.interfaces.INotification;
 import org.puremvc.java.patterns.command.SimpleCommand;
 
@@ -22,6 +24,12 @@ public class ProcessUserChoiceCommand extends SimpleCommand {
             return;
         }
 
-        sendNotification(GeneralNotifications.);
+        sendNotification(GeneralNotifications.ITEM_DELIVERY_STARTED);
+
+        DoorsAndCoverProxy doorsAndCoverProxy = (DoorsAndCoverProxy) facade.retrieveProxy(DoorsAndCoverProxy.NAME);
+        doorsAndCoverProxy.openCoverForDelivery();
+
+        MotorsProxy motorsProxy = (MotorsProxy) facade.retrieveProxy(MotorsProxy.NAME);
+        motorsProxy.startItemDelivery(itemPosition);
     }
 }

@@ -6,4 +6,5 @@ public class GeneralNotifications {
 
     public static final String BONUS_BALANCE_UPDATED = "BONUS_BALANCE_UPDATED";
     public static final String REGULAR_BALANCE_UPDATED = "REGULAR_BALANCE_UPDATED";
+    public static final String ITEM_DELIVERY_STARTED = "ITEM_DELIVERY_STARTED";
 }

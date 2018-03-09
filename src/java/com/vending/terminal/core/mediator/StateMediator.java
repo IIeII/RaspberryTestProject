@@ -12,5 +12,5 @@ public class StateMediator extends Mediator {
         super(NAME, new MainStateComponent());
     }
 
-    
+
 }
